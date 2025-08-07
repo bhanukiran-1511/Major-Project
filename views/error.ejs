@@ -1,0 +1,21 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-5">
+    <div class="col-8 offset-2 text-center">
+        
+        
+        
+        <h1 class="display-1 fw-bolder text-danger"><%= statusCode %></h1>
+
+        <p class="fs-3"> 
+            <span class="text-danger">Oops!</span> <%= message %>.
+        </p>
+
+        <p class="lead">
+            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+        </p>
+
+        <a href="/listings" class="btn btn-primary btn-lg mt-3">TAKE ME HOME</a>
+
+    </div>
+</div>

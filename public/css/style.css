@@ -1,0 +1,175 @@
+/* General Body & Typography */
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+#nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fafafa !important;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.fa-brands {
+    color: #222222;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-socials,
+.f-info-links,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222222;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Card Styling for Listings (Index Page) */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.listing-card .card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 20rem;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* Card Overlay Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* Show Page Styling */
+.show-img {
+    height: 60vh;
+    border-radius: 1rem;
+}
+
+.show-card {
+    padding: 0;
+    border: none;
+}
+
+.show-card .card-body {
+    padding: 1.5rem 0 !important;
+}
+
+.show-page-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Review Sections */
+.reviews h4, .show-card > .card-body > h4 {
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.show-card > .card-body > hr {
+    margin: 2rem 0;
+}
+
+/* --- Review Card Enhancements --- */
+.review-card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease-in-out;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.review-card .card-body {
+    padding: 1.25rem !important;
+}
+
+.review-card .card-text:first-of-type {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.review-card .card-text strong {
+    font-weight: 500;
+    color: #555;
+}
+
+.review-card .card-text span {
+    color: #fdcc0d; /* Gold color for the star */
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+/* Mobile Navbar Styling */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #fafafa !important;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
+    }
+}
