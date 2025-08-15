@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
+const flash = require('connect-flash');
 app.use(methodOverride('_method'));
 const path = require('path');
 app.use(express.urlencoded({ extended: true }));
@@ -22,8 +23,15 @@ const sessionOptions = {
         maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
     }
 };
-app.use(session(sessionOptions));
 
+app.use(session(sessionOptions));
+app.use(flash());
+
+app.use((req, res, next) => {
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+});
 
 const ExpressError = require('./utils/ExpressError.js');
 
