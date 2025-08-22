@@ -3,7 +3,8 @@ const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
-app.use(methodOverride('_method'));
+const
+    app.use(methodOverride('_method'));
 const path = require('path');
 app.use(express.urlencoded({ extended: true }));
 const ejsMate = require('ejs-mate');
@@ -16,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const sessionOptions = {
     secret: 'thisshouldbeabettersecret',
     resave: false,
-    saveUninitialized: true,    
+    saveUninitialized: true,
     cookie: {
         httpOnly: true,
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // 7 days
@@ -35,8 +36,8 @@ app.use((req, res, next) => {
 
 const ExpressError = require('./utils/ExpressError.js');
 
-const listings=require('./routes/listing.js');
-const reviews=require('./routes/review.js');
+const listings = require('./routes/listing.js');
+const reviews = require('./routes/review.js');
 
 const mongoose = require('mongoose');
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
@@ -64,7 +65,7 @@ app.all('/*splat', (req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-    let {statusCode=500,message="Something went Wrong"}=err;
+    let { statusCode = 500, message = "Something went Wrong" } = err;
     res.render('error.ejs', { statusCode, message });
     // res.status(statusCode).send(message);
 });
